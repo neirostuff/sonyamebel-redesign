@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сон-Я — Изготовление интерьерных кроватей, матрасов и мягкой мебели в Новосибирске</title>
+  <meta name="description" content="Собственное производство интерьерных кроватей, ортопедических матрасов и мягких стеновых панелей по индивидуальным размерам в Новосибирске. Гарантия 5 лет, более 500 видов обивки.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Pitch & Commercial Proposal Bar for Vasily (Owner of Сон-Я) -->
+  <div class="pitch-bar">
+    <div class="pitch-info">
+      <span class="pitch-badge">ПРОТОТИП ДЛЯ СОН-Я</span>
+      <span>Василий, посмотрите как выглядит ваш обновленный сайт с онлайн-чатом!</span>
+    </div>
+    <div class="pitch-actions">
+      <button class="pitch-btn highlight" id="openPitchBtn">📊 Презентация & Выгода (+35% конверсии)</button>
+      <button class="pitch-btn" onclick="document.getElementById('chatTrigger').click();">💬 Тест Онлайн-Чата</button>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">СЯ</div>
+        <div class="brand-text">
+          <h1>СОН-Я</h1>
+          <p>Интерьерная мебель • Новосибирск</p>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#catalog">Каталог</a>
+        <a href="#custom-beds">Кровати на заказ</a>
+        <a href="#mattresses">Матрасы</a>
+        <a href="#showrooms">Шоурумы в НСК</a>
+      </nav>
+
+      <div class="header-contacts">
+        <a href="tel:+79134608787" class="phone-link">
+          <span class="num">+7 (913) 460-87-87</span>
+          <span class="city">🟢 4 салона в Новосибирске</span>
+        </a>
+        <button class="btn-header-call" onclick="document.getElementById('chatTrigger').click();">Онлайн-Консультация</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-tag">✨ Собственное производство в Новосибирске</div>
+      <h1 class="hero-title">Интерьерные кровати и матрасы <span>вашей мечты</span> по размерам</h1>
+      <p class="hero-subtitle">
+        Создаем мягкие кровати, ортопедические матрасы и стеновые панели по индивидуальным размерам за 7 дней. Более 500 фактур ткани: велюр, букле, экокожа.
+      </p>
+
+      <div class="hero-cta-group">
+        <button class="btn-hero-primary" id="heroChatBtn">
+          💬 Рассчитать стоимость в чате
+        </button>
+        <button class="btn-hero-secondary" onclick="document.getElementById('showrooms').scrollIntoView({behavior:'smooth'});">
+          📍 Адреса шоурумов
+        </button>
+      </div>
+
+      <div class="hero-features">
+        <div class="feature-item">
+          <h4>0% посредников</h4>
+          <p>Прямые цены от фабричного цеха на ул. Королёва</p>
+        </div>
+        <div class="feature-item">
+          <h4>5 лет гарантии</h4>
+          <p>На усиленные каркасы и подъемные механизмы</p>
+        </div>
+        <div class="feature-item">
+          <h4>Замер и образцы</h4>
+          <p>Бесплатный выезд дизайнера по Новосибирску</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image-wrapper">
+      <div class="hero-image-card">
+        <img src="images/hero_bed.png" alt="Интерьерная кровать Сон-Я Новосибирск">
+        <div class="hero-badge-overlay">
+          <div class="badge-text">
+            <strong>Модель «Versailles Luxury»</strong>
+            <span>Мягкое велюровое изголовье с подъемным механизмом</span>
+          </div>
+          <div class="rating-pill">
+            ★ 5.0 <span>в 2ГИС</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Catalog Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="section-title">
+      <h2>Наше производство в Новосибирске</h2>
+      <p>Выберите интересующее направление или воспользуйтесь онлайн-чатом для создания индивидуального 3D-проекта.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <!-- Card 1 -->
+      <div class="catalog-card">
+        <div class="catalog-card-img">
+          <img src="images/hero_bed.png" alt="Интерьерные кровати на заказ">
+          <span class="card-tag">ХИТ ПРОДАЖ</span>
+        </div>
+        <div class="catalog-card-body">
+          <div>
+            <h3>Интерьерные Кровати</h3>
+            <p>Парящие кровати, мягкие изголовья, встроенные бельевые ящики, надежные газовые лифты.</p>
+          </div>
+          <div class="card-price-row">
+            <div>
+              <span style="font-size: 11px; color: var(--text-muted); display: block;">Стоимость</span>
+              <span class="price-text">от 24 900 ₽</span>
+            </div>
+            <button class="btn-card-chat" onclick="window.startQuiz('bed'); document.getElementById('chatTrigger').click();">Рассчитать в чате</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="catalog-card">
+        <div class="catalog-card-img">
+          <img src="images/sofa.png" alt="Мягкая мебель и диваны">
+          <span class="card-tag">ПО ИНДИВИДУАЛЬНЫМ РАЗМЕРАМ</span>
+        </div>
+        <div class="catalog-card-body">
+          <div>
+            <h3>Диваны и Мягкая Мебель</h3>
+            <p>Модульные диваны для гостиных и студий, банкетки, мягкие пуфы и кушетки в любых тканях.</p>
+          </div>
+          <div class="card-price-row">
+            <div>
+              <span style="font-size: 11px; color: var(--text-muted); display: block;">Стоимость</span>
+              <span class="price-text">от 31 500 ₽</span>
+            </div>
+            <button class="btn-card-chat" onclick="window.startQuiz('bed'); document.getElementById('chatTrigger').click();">Рассчитать в чате</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="catalog-card">
+        <div class="catalog-card-img">
+          <img src="images/wall_panels.png" alt="Мягкие стеновые панели">
+          <span class="card-tag">ТРЕНД 2026</span>
+        </div>
+        <div class="catalog-card-body">
+          <div>
+            <h3>Мягкие Стеновые Панели</h3>
+            <p>Декоративные фактурные панели для спален, прихожих и кабинетов с интегрированной подсветкой.</p>
+          </div>
+          <div class="card-price-row">
+            <div>
+              <span style="font-size: 11px; color: var(--text-muted); display: block;">Стоимость</span>
+              <span class="price-text">от 3 200 ₽/м²</span>
+            </div>
+            <button class="btn-card-chat" onclick="window.startQuiz('panels'); document.getElementById('chatTrigger').click();">Рассчитать в чате</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showrooms Section -->
+  <section class="showrooms-section" id="showrooms">
+    <div class="showrooms-container">
+      <div class="section-title">
+        <h2 style="color: white;">Салоны и Шоурумы «Сон-Я» в Новосибирске</h2>
+        <p style="color: #94A3B8;">Приезжайте оценить качество сборки, протестировать ортопедические матрасы и выбрать ткани из 500+ образцов.</p>
+      </div>
+
+      <div class="showrooms-grid">
+        <div class="showroom-card">
+          <h4>ТВК «Калейдомор»</h4>
+          <p>ул. Светлановская, 50 (0 и 2 этаж)</p>
+          <div class="showroom-hours">⏰ Пн-Вс: 10:00 - 21:00</div>
+        </div>
+
+        <div class="showroom-card">
+          <h4>ТЦ «Калейдоскоп»</h4>
+          <p>ул. Сибиряков-Гвардейцев, 49/1 к2 (1 этаж)</p>
+          <div class="showroom-hours">⏰ Пн-Вс: 10:00 - 19:00</div>
+        </div>
+
+        <div class="showroom-card">
+          <h4>ТЦ «Река»</h4>
+          <p>ул. Большевистская, 131 к2 (1 этаж)</p>
+          <div class="showroom-hours">⏰ Пн-Вс: 10:00 - 19:00</div>
+        </div>
+
+        <div class="showroom-card">
+          <h4>Фабричный Цех</h4>
+          <p>ул. Королёва, 40 к128 (2 этаж)</p>
+          <div class="showroom-hours">⏰ Пн-Пт: 09:00 - 19:00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Chat Widget -->
+  <div class="chat-widget-container">
+    <div class="chat-trigger-tooltip">👋 Задайте вопрос или рассчитайте цену!</div>
+    <button class="chat-trigger-btn" id="chatTrigger" aria-label="Открыть чат">
+      💬
+      <span class="online-dot"></span>
+    </button>
+
+    <!-- Expandable Chat Window Panel -->
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="manager-info">
+          <div class="manager-avatar">
+            Е
+            <span class="status-indicator"></span>
+          </div>
+          <div class="manager-details">
+            <h4>Елена • Сон-Я НСК</h4>
+            <p>🟢 В сети (отвечает за 15 сек)</p>
+          </div>
+        </div>
+        <button class="chat-close-btn" id="chatClose">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages rendered by app.js -->
+      </div>
+
+      <div class="chat-footer">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Напишите вопрос (например: цена, доставка, адрес)...">
+        <button class="chat-send-btn" id="chatSendBtn">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commercial Proposal Modal for Vasily -->
+  <div class="pitch-modal-overlay" id="pitchModal">
+    <div class="pitch-modal-box">
+      <button class="pitch-modal-close" id="pitchClose">✕</button>
+      <div class="pitch-modal-header">
+        <h3>Коммерческое предложение для компании «Сон-Я»</h3>
+        <p>Василий, внедрение смарт-чата на ваш сайт превратит посетителей в горячие заявки с фиксацией в вашей CRM.</p>
+      </div>
+
+      <div class="pitch-stats-grid">
+        <div class="pitch-stat-card">
+          <div class="val">+35%</div>
+          <div class="lbl">Рост заявок с мобильных</div>
+        </div>
+        <div class="pitch-stat-card">
+          <div class="val">15 сек</div>
+          <div class="lbl">Скорость первичного ответа</div>
+        </div>
+        <div class="pitch-stat-card">
+          <div class="val">100%</div>
+          <div class="lbl">Интеграция с Bitrix24 / AmoCRM</div>
+        </div>
+      </div>
+
+      <div style="background: #F1F5F9; padding: 16px; border-radius: 14px; font-size: 14px; color: #334155; margin-bottom: 20px;">
+        💡 <strong>Почему это выгодно:</strong> Клиенты с телефонов не хотят звонить первой попавшейся компании. Онлайн-чат с мгновенным квиз-расчетом собирает номер телефона и параметры мебели еще до того, как человек уйдет к конкурентам.
+      </div>
+
+      <div class="price-plans-grid">
+        <div class="plan-card">
+          <h4>Смарт-Чат + Квиз</h4>
+          <div class="plan-price">13 900 ₽ <span style="font-size: 13px; color: var(--text-muted); font-weight: normal;">(разово)</span></div>
+          <ul class="plan-features">
+            <li>Квиз-калькулятор расчетов кроватей и матрасов</li>
+            <li>Интеграция с Bitrix24 / AmoCRM и WhatsApp</li>
+            <li>Установка виджета на существующий сайт</li>
+            <li>Мобильная адаптация и захват контактов</li>
+          </ul>
+        </div>
+
+        <div class="plan-card featured">
+          <h4>Полный Редизайн + Чат</h4>
+          <div class="plan-price">35 900 ₽ <span style="font-size: 13px; color: var(--text-muted); font-weight: normal;">(под ключ)</span></div>
+          <ul class="plan-features">
+            <li>Премиальный продающий сайт под бренд Сон-Я</li>
+            <li>Встроенный смарт-чат с квиз-расчетами</li>
+            <li>Авто-фиксация всех лидов в вашей CRM</li>
+            <li>SEO-оптимизация и связь с рекламой 2ГИС</li>
+          </ul>
+        </div>
+
+        <div class="plan-card" style="border-color: #8B5CF6; background: #F5F3FF;">
+          <h4>ИИ-Консультант 24/7</h4>
+          <div class="plan-price" style="color: #7C3AED;">14 900 ₽ <span style="font-size: 13px; color: var(--text-muted); font-weight: normal;">/ месяц</span></div>
+          <ul class="plan-features">
+            <li>Нейросетевой ассистент на базе каталога Сон-Я</li>
+            <li>Ведет свободный диалог с клиентом 24/7</li>
+            <li>Консультирует по тканям, размерам и доставке</li>
+            <li>Сам квалифицирует и создает сделку в CRM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <a href="https://t.me/neirovlad" target="_blank" class="btn-hero-primary" style="margin: 0 auto; text-decoration: none; display: inline-flex;">
+          🤝 Согласовать запуск для Сон-Я
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
