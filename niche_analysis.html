@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ ниш для продаж сайтов через «Холодное демо»</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --container-bg: #1e293b;
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-color: #6366f1;
+            --accent-hover: #4f46e5;
+            --border-color: #334155;
+            
+            --tag-email: #d8b4fe;
+            --tag-email-bg: #581c87;
+            --tag-phone: #93c5fd;
+            --tag-phone-bg: #1e3a8a;
+            --tag-chat: #86efac;
+            --tag-chat-bg: #14532d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(to right, #a5b4fc, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #ffffff;
+            margin-top: 2rem;
+            margin-bottom: 1.25rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+
+        /* Карточки ниш */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background-color: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        .card li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Инструкции и шаги */
+        .step-list {
+            margin-bottom: 2.5rem;
+        }
+
+        .step {
+            background-color: #0f172a;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .step-title {
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Шаблон сообщения */
+        .template-box {
+            background-color: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            color: #a7f3d0;
+            margin: 1rem 0 2rem 0;
+            position: relative;
+        }
+
+        .template-box::before {
+            content: "Шаблон сообщения";
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background-color: var(--container-bg);
+            padding: 0 8px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-family: sans-serif;
+        }
+
+        /* Таблица */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            background-color: #0f172a;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #1e293b;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Теги каналов связи */
+        .channel-tag {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .channel-email {
+            background-color: var(--tag-email-bg);
+            color: var(--tag-email);
+        }
+
+        .channel-phone {
+            background-color: var(--tag-phone-bg);
+            color: var(--tag-phone);
+        }
+
+        .channel-chat {
+            background-color: var(--tag-chat-bg);
+            color: var(--tag-chat);
+        }
+
+        /* Заметки */
+        .alert-box {
+            background-color: rgba(99, 102, 241, 0.15);
+            border: 1px solid var(--accent-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .alert-box h3 {
+            color: #a5b4fc;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            th, td {
+                padding: 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Анализ ниш для «Холодного демо»</h1>
+        <p class="subtitle">Стратегия выбора ниши, сбора лидов и каналов связи для продажи сайтов по системе MVP-визуализаций.</p>
+    </header>
+
+    <div class="alert-box">
+        <h3>ℹ️ Суть стратегии</h3>
+        <p>Вы ищете компании, у которых <strong>нет сайта</strong> (или указана ссылка на группу соцсетей/карты), собираете контакты, создаете за 15 минут персонализированный макет сайта с их логотипом, фотографиями и контактами, после чего отправляете ссылку на демо. Вау-эффект от готового сайта про их бизнес кратно увеличивает конверсию в продажу.</p>
+    </div>
+
+    <h2>🥇 ТОП-3 ниши для максимальной конверсии</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-header">
+                <span class="badge">⛺</span>
+                <span class="card-title">Глэмпинги и базы отдыха</span>
+            </div>
+            <p>Идеально для работы через мессенджеры. Пик сезона.</p>
+            <ul>
+                <li><strong>Боль:</strong> Теряют от 15% до 25% комиссии на сервисах вроде Островок/Суточно.ру.</li>
+                <li><strong>Демо:</strong> Крупный баннер с фото их домиков, кнопка «Забронировать напрямую».</li>
+                <li><strong>Контакт:</strong> На звонки отвечает напрямую владелец или его супруга. Легко писать в WhatsApp/Telegram.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="badge">👕</span>
+                <span class="card-title">Локальные бренды (одежда, косметика)</span>
+            </div>
+            <p>Отличный эмоциональный отклик и легкий выход на основателей.</p>
+            <ul>
+                <li><strong>Боль:</strong> Хотят выглядеть солидно и выйти из рамок только соцсетей/Wildberries.</li>
+                <li><strong>Демо:</strong> Современный минималистичный дизайн с галереей их товаров и цен.</li>
+                <li><strong>Контакт:</strong> Молодые предприниматели, моментально реагируют на демо в Instagram/Telegram.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="badge">🛠️</span>
+                <span class="card-title">Строительные бригады (кровля, фасады)</span>
+            </div>
+            <p>Огромные чеки на услуги и отсутствие конкурентов по сайтам.</p>
+            <ul>
+                <li><strong>Боль:</strong> Клиенты уходят к крупным фирмам, так как у бригады «нет лица» в интернете.</li>
+                <li><strong>Демо:</strong> Квиз-калькулятор стоимости работ, фото процесса (до/после).</li>
+                <li><strong>Контакт:</strong> Звонок по Авито → выход на бригадира → отправка демо в WhatsApp.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>🚀 Пошаговая стратегия тестирования первой ниши</h2>
+    <div class="step-list">
+        <div class="step">
+            <div class="step-title">Шаг 1. Отбор городов и парсинг</div>
+            <p>Парсите крупные города-миллионники (Екатеринбург, Новосибирск, Челябинск, Нижний Новгород и др.). В Москве конкуренция перегрета, а в регионах много денег и старых сайтов. Запускайте парсер по целевым рубрикам (например, <em>«Изготовление мебели»</em>, <em>«Мебель для кухни»</em>, <em>«Мебельные фасады»</em>).</p>
+        </div>
+        <div class="step">
+            <div class="step-title">Шаг 2. Фильтрация и сегментация базы</div>
+            <p>Удалите из Excel-файла компании, у которых уже есть полноценный рабочий сайт. Оставьте только те, у кого поле пустое или ведет на соцсети. Разделите базу на два списка: с email-адресами (для рассылок) и с мобильными телефонами (для мессенджеров/звонков).</p>
+        </div>
+        <div class="step">
+            <div class="step-title">Шаг 3. Быстрая сборка демо</div>
+            <p>Берем 3-5 фотографий работ компании из их профиля Авито, соцсетей или 2ГИС. Создаем лендинг на шаблоне в платформе Coldy, ставим их телефон на кнопку вызова, прописываем реальные услуги и цены. Деплоим за 1 минуту.</p>
+        </div>
+    </div>
+
+    <h2>💬 Скрипт контакта для WhatsApp / Telegram</h2>
+    <div class="template-box">«[Имя владельца], здравствуйте! Меня зовут [Ваше Имя].
+
+Наткнулся на ваш глэмпинг [Название] в соцсетях — очень крутые домики и атмосфера! Заметил, что у вас нет отдельного сайта для прямых бронирований, и вы теряете деньги на комиссиях агрегаторов.
+
+Я набросал для вас концепт современного сайта с вашими реальными фото и контактами. Посмотрите, как это может выглядеть: [ссылка на демо]
+
+Если вам понравится визуализация, мы можем обсудить, как запустить его в работу, чтобы гости бронировали у вас напрямую без комиссий. Как вам идея?»</div>
+
+    <h2>💻 Размещение сайтов на своем VPS (Экономия на хостингах)</h2>
+    <p>Чтобы не платить за хостинг под каждого клиента отдельно, арендуйте <strong>один российский VPS</strong> (Beget, Timeweb) за 300–500 рублей в месяц. Установите туда бесплатную панель управления (FastPanel / aaPanel). Привязывайте домены клиентов к IP-адресу вашего VPS. Вы платите за 1 сервер, а клиентам можете продавать хостинг за 200–300 рублей в месяц каждый, окупая сервер и получая пассивный доход.</p>
+
+    <h2>📊 Сравнительная таблица ниш и каналов связи</h2>
+    <p>Используйте эту таблицу, чтобы понять, какой канал коммуникации (Email, звонки или мессенджеры) лучше всего работает под конкретную нишу.</p>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-center">№</th>
+                    <th>Ниша</th>
+                    <th class="text-center">Чек</th>
+                    <th class="text-center">ЛПР</th>
+                    <th class="text-center">Вау</th>
+                    <th class="text-center">Сложность</th>
+                    <th>Канал связи</th>
+                    <th>Почему именно этот канал</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td><strong>Глэмпинги, базы отдыха</strong></td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">4</td>
+                    <td><span class="channel-tag channel-chat">Мессенджеры (WA/TG)</span></td>
+                    <td>Владельцы молоды и активны в мессенджерах. Ссылка на демо сразу привлекает внимание.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td><strong>Строительные бригады</strong></td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">3</td>
+                    <td><span class="channel-tag channel-phone">Звонок ➡️ WhatsApp</span></td>
+                    <td>Простые мужики, почту не проверяют. Нужно позвонить («я сделал вам макет...»), затем сбросить ссылку.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td><strong>Малые производства / Цеха</strong></td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td><span class="channel-tag channel-email">Email-рассылка</span></td>
+                    <td>Привыкли к B2B-переписке по почте. Письмо с темой «Каталог продукции для [Название]» хорошо открывается.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">4</td>
+                    <td><strong>Установка заборов / ворот</strong></td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">4</td>
+                    <td><span class="channel-tag channel-phone">Звонок ➡️ WhatsApp</span></td>
+                    <td>Работают в поле. Быстрый звонок по номеру с Авито и отправка макета в WhatsApp.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">5</td>
+                    <td><strong>Локальные бренды одежды</strong></td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">4</td>
+                    <td><span class="channel-tag channel-chat">Мессенджеры (Insta/TG)</span></td>
+                    <td>Весь бизнес в соцсетях. Почту игнорируют. Писать строго в директ или рабочий TG.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">6</td>
+                    <td><strong>Малые турфирмы / Гиды</strong></td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">4</td>
+                    <td><span class="channel-tag channel-chat">Мессенджеры (WA/TG)</span></td>
+                    <td>Всегда на связи с клиентами в чатах. Оперативно реагируют на сообщения.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">7</td>
+                    <td><strong>Свадебные специалисты</strong></td>
+                    <td class="text-center">2</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td><span class="channel-tag channel-chat">Мессенджеры (Insta/TG)</span></td>
+                    <td>Творческие люди, личные бренды. Очень вовлечены в визуал, общаются в соцсетях.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">8</td>
+                    <td><strong>Аренда спецтехники</strong></td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">2</td>
+                    <td class="text-center">3</td>
+                    <td><span class="channel-tag channel-phone">Звонки</span></td>
+                    <td>Быстрые звонки. Решения принимаются по телефону. Прозвон объявлений на Авито.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">9</td>
+                    <td><strong>Малые СТО / Детейлинг</strong></td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">4</td>
+                    <td><span class="channel-tag channel-phone">Звонок ➡️ WhatsApp</span></td>
+                    <td>Владелец часто в боксе с машиной. Проще сначала позвонить и договориться сбросить демо.</td>
+                </tr>
+                <tr>
+                    <td class="text-center">10</td>
+                    <td><strong>B2B услуги (охрана труда и др)</strong></td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">2</td>
+                    <td class="text-center">2</td>
+                    <td><span class="channel-tag channel-email">Email-рассылка</span></td>
+                    <td>Официальный B2B-сегмент. Все документы и КП отправляют по почте. Email показывает лучшую конверсию.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
